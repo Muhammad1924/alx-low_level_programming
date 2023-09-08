@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - A program that prints the size of various comp types
- * Return 0
+ * Return 0 (success)
  */
 int main(void)
 {
