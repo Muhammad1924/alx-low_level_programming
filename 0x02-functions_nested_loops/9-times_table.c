@@ -2,27 +2,39 @@
 #include <stdio.h>
 /**
  * times_table - prints the 9 times table, starting with 0
- * Return: void
+ * x ==row, y == column, z == digit of current result
+ * Return: times table
+ * add extra space past single digit
  */
 
 void times_table(void)
 {
-	int i, j, result;
+	int x, y, z;
 
-	for (i = 0 ; i < 10 ; i++)
+	for (x = 0 ; x <= 9 ; x++)
 	{
-		for (j = 0 ; j < 10 ; j++)
+		_putchar('0');
+		_putchar(',');
+		_putchar(' ');
+		for (y = 0 ; y <= 9 ; y++)
 		{
-			result = 1 * j;
-			if (j == 0)
-				printf("%d, ", result);
+			z = (x * y);
+			if ((z / 10) > 0)
+			{
+				_putchar((z / 10) + '0');
+			}
 			else
 			{
-				printf("%2d", result);
-				if (j != 9)
-					printf(", ");
+				_putchar(' ');
+			}
+			_putchar((z % 10) + '0');
+
+			if (y < 9)
+			{
+				_putchar(',');
+				_putchar(' ');
 			}
 		}
-		printf("\n");
+		_putchar('\n');
 	}
 }
