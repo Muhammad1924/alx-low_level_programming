@@ -46,12 +46,13 @@ int _atoi(char *s)
 
 	return (n);
 }
+
 /**
  * main - multiplies of numbers
  * @argc: number of arguments
  * @argv: array of arguments
  *
- * Return: 0, 1
+ * Return: 0 (success), 1 (error)
  */
 
 int main(int argc, char *argv[])
